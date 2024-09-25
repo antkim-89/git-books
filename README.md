@@ -1,3 +1,3 @@
 # Hello World!
 
-Wellcome to my git.
+> 안녕하세요. 저의 깃 북에 방문해주셔서 감사합니다!
