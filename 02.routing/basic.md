@@ -22,11 +22,11 @@ next.js의 기본 라우팅 개념을 이해하는덴 다음 그림을 보시는
 
 ### URL 구조
 
-next js의 url이 어떻게 구성 되는지 설명하는 그립니다.
+next js의 URL이 어떻게 구성 되는지 설명하는 그림입니다.
 
 
 
 <figure><img src="https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fterminology-url-anatomy.png&#x26;w=1920&#x26;q=75" alt=""><figcaption></figcaption></figure>
 
 * **URL Segment:** URL 경로에서 "/"로 구분되어진 각 요소를 의미합니다. (예: dashboard, setting)
-* **URL Path:** 도메인 이후에 씌여진 경로의 일부 입니다.(예:  "/dashboard/setting")
+* **URL Path:** 도메인 이후에 씌여진 경로의 일부 입니다. (예:  "/dashboard/setting")
