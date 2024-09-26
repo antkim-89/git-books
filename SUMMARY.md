@@ -5,6 +5,7 @@
 ## 01.intro
 
 * [installation](01.intro/installation.md)
+* [basic files](01.intro/basic-files.md)
 
 ## 02.routing
 

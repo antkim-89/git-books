@@ -1,3 +1,7 @@
+---
+description: 프로젝트를 시작하는 방법입니다.
+---
+
 # installation
 
 System Requirements:
@@ -56,8 +60,9 @@ What import alias would you like configured? @/*
 
 {% code title="directory" %}
 ```
--src
-    -app
+-purblic
+-src -- 가장 기본이 되는 폴더, 이곳 내부에 component등의 하위 폴더와 파일들을 생성
+    -app -- view단계의 파일과 레이아웃들이 있는 곳
         -layout.tsx -- 루트 페이지 레이아웃
         -app.tsx -- 루트 페이지
         ...
@@ -66,7 +71,7 @@ What import alias would you like configured? @/*
 -package.json -- 현재 프로젝트에 대한 정보, 설치된 패키지와 설정된 스크립트 정보 등의 파일.
 -tsconfig.json -- 타입스크립트 설정 파일.
 -tailwind.config.ts -- 테일윈드 설정 파일.
-
+...
 ```
 {% endcode %}
 
