@@ -1,5 +1,5 @@
 ---
-description: 프로젝트를 시작하는 방법입니다.
+description: 프로젝트를 시작하는 방법
 ---
 
 # installation
@@ -7,7 +7,7 @@ description: 프로젝트를 시작하는 방법입니다.
 System Requirements:
 
 * [Node.js 18.18](https://nodejs.org/)나 그 이후 버전.
-* macOS, Windows (including WSL),와 Linux가 지원됌
+* macOS, Windows (including WSL), Linux 지원
 
 
 
@@ -54,7 +54,7 @@ What import alias would you like configured? @/*
 
 ### 디렉토리 구조
 
-명령어로 nextjs설치하고 나면 아래와 같은 구조로 디렉토리가 생깁니다.
+명령어로 nextjs 설치하고 나면 아래와 같은 구조로 디렉토리가 생깁니다.
 
 그리고 몇개의 파일들이 생성되는데 가장 기본이 되는 파일들입니다.
 

@@ -9,4 +9,4 @@
 
 ## 02.routing
 
-* [Page 2](02.routing/page-2.md)
+* [basic](02.routing/basic.md)
