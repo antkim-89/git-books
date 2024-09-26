@@ -1,7 +1,3 @@
----
-description: nextjs를 구성하는 기본 파일들
----
-
 # basic files
 
 ### 최상위 레벨 파일

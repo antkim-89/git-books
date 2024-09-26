@@ -1,5 +1,5 @@
 ---
-description: 프로젝트를 시작하는 방법
+description: 프로젝트를 시작하는 방법입니다.
 ---
 
 # installation
