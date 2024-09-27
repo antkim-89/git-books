@@ -4,7 +4,7 @@ description: UI에 관련된 파일과 사용법
 
 # UI 관련 파일들
 
-## Pages
+### Pages
 
 page 파일은 경로(폴더)당 내부에 단일로 존재해야합니다. page파일로 경로의 View를 표현할 수 있습니다.
 
@@ -22,3 +22,5 @@ export default function Page() {
 ```
 
 {% endcode %}
+
+### Layout

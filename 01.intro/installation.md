@@ -2,14 +2,14 @@
 description: 프로젝트를 시작하는 방법입니다.
 ---
 
-# installation
+# Installation
 
 System Requirements:
 
 - [Node.js 18.18](https://nodejs.org/)나 그 이후 버전.
 - macOS, Windows (including WSL), Linux 지원
 
-### 설치방법
+### Installation(설치방법)
 
 next는 `create-next-app` 명령어로 시작합니다.
 
@@ -54,7 +54,7 @@ What import alias would you like configured? @/*
 
 {% endcode %}
 
-### 디렉토리 구조
+### Directory Structure(디렉토리 구조)
 
 명령어로 nextjs 설치하고 나면 아래와 같은 구조로 디렉토리가 생깁니다.
 
