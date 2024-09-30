@@ -18,3 +18,7 @@ icon: hand-wave
 | os           | mac os    |
 | next version | 15.0      |
 | ide          | cursor ai |
+
+> 문의 사항이나 제 실수를 발견해주신다면 아래의 주소로 연락주세요!
+>
+> e-mail: <junkyeom89@gmail.com>
