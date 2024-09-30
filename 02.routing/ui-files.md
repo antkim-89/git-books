@@ -115,6 +115,6 @@ export default function RootLayout({
 
 {% endcode %}
 
-#### Template
+### Template
 
 `template`는 레이아웃과 유사하게 작동하지만, 탐색 시에 매번 새로운 인스턴스를 만들어냅니다. 그렇기 때문에 컴포넌트의 상태가 유지되지 않으며, `useEffect`는 다시 동기화됩니다. 이렇게 재동기화가 필요한 경우엔 `layout`보단 `template`을 활용하는 것이 유리합니다.
