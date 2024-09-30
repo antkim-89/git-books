@@ -90,3 +90,9 @@ export default function RootLayout({
 ```
 
 {% endcode %}
+
+#### Nesting Layout
+
+레이아웃은 중첩이 가능합니다. 중첩된 레이아웃은 상위 레이아웃에서 하위 레이아웃을 포함하며 아래와 같은 모양 표시됩니다.
+
+<figure><img src="https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fnested-layouts-ui.png&w=1920&q=75" alt=""><figcaption><p> nesting layout 위치 예시</p></figcaption></figure>
