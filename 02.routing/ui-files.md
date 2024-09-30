@@ -97,4 +97,20 @@ export default function RootLayout({
 
 <figure><img src="https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fnested-layouts-ui.png&w=1920&q=75" alt=""><figcaption><p> nesting layout 위치 예시</p></figcaption></figure>
 
+{% endcode %}
+
+{% code title="체크 사항" %}
+
+```
+- 루트 레이아웃만이 <html>과 <body>를 포함할 수 있습니다.
+- 기본적으로 서버 컴포넌트로 설정되지만, 클라이언트 컴포넌트로 설정할 수 있습니다.
+레이아웃은 데이터 패칭이 가능합니다.
+- 부모 레이아웃과 자식 간에 데이터를 직접 전달할 수는 없습니다. 하지만 동일한 데이터를 경로에서 여러 번 가져오는 것은 가능하며, React는 성능에 영향을 주지 않고 이러한 요청을 자동으로 중복 제거(dedupe)합니다.
+- layout에서는 pathname에 직접 접근이 불가능합니다. 하지만 주입된 클라이언트 컴포넌트의 경우 usePathname hook을 사용할 수 있습니다.
+```
+
+{% endcode %}
+
 #### Template
+
+`template`는 레이아웃과 유사하게 작동하지만, 탐색 시에 매번 새로운 인스턴스를 만들어냅니다. 그렇기 때문에 컴포넌트의 상태가 유지되지 않으며, `useEffect`는 다시 동기화됩니다. 이렇게 재동기화가 필요한 경우엔 `layout`보단 `template`을 활용하는 것이 유리합니다.
