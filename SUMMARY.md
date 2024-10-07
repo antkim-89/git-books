@@ -10,4 +10,5 @@
 ## 02.routing
 
 - [basic](02.routing/basic.md)
-- [ui-files](02.routing/ui-files.md)
+- [ui files](02.routing/ui-files.md)
+- [link and navigating](02.routing/link-and-nav.md)

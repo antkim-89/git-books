@@ -2,7 +2,7 @@
 description: UI에 관련된 파일과 사용법
 ---
 
-# UI 관련 파일들
+# UI Files
 
 UI를 구성하는 기본 적인 파일들입니다.
 
