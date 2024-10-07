@@ -169,6 +169,7 @@ export default function Page() {
 ### Active Nav Links
 
 `usePathname()`이란 훅(hook)을 사용하여 네비게이션의 활성을 정의할 수 있습니다.
+
 `usePathname()`은 클라이언트 훅이기 때문에 `use client`정의를 잊으면 안됩니다.
 
 {% endcode %}
