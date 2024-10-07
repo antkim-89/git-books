@@ -167,3 +167,37 @@ export default function Page() {
 {% endcode %}
 
 ### Active Nav Links
+
+`usePathname()`이란 훅(hook)을 사용하여 네비게이션의 활성을 정의할 수 있습니다.
+`usePathname()`은 클라이언트 훅이기 때문에 `use client`정의를 잊으면 안됩니다.
+
+{% endcode %}
+
+{% code title="Nav 예시" %}
+
+```js
+"use client";
+
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+export function NavLinks() {
+  const pathname = usePathname();
+
+  return (
+    <nav>
+      <Link className={`link ${pathname === "/" ? "active" : ""}`} href="/">
+        Home
+      </Link>
+
+      <Link
+        className={`link ${pathname === "/about" ? "active" : ""}`}
+        href="/about">
+        About
+      </Link>
+    </nav>
+  );
+}
+```
+
+{% endcode %}
