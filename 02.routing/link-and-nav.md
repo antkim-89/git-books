@@ -90,3 +90,21 @@ export default async function Profile({ params }: { params: { id: string } }) {
 ```
 
 {% endcode %}
+
+{% endcode %}
+
+{% code title="good to know" %}
+
+```
+- redirect는 307 (Temporary Redirect) 상태를 기본적으론 리턴합니다. 서버 액션을 사용할 때, 보통 POST 요청에 성공 페이지로 리다이렉팅 하기 위한 결과로 사용되는 303 (See Other)을 리턴합니다.
+
+- redirect internally throws an error so it should be called outside of try/catch blocks.
+
+- redirect can be called in Client Components during the rendering process but not in event handlers. You can use the useRouter hook instead.
+
+- redirect also accepts absolute URLs and can be used to redirect to external links.
+
+- If you'd like to redirect before the render process, use next.config.js or Middleware.
+```
+
+{% endcode %}
