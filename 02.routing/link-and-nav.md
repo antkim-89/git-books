@@ -212,9 +212,46 @@ Next.js에서 라우트를 프리페치하는 두 가지 방법이 있습니다:
 {% code title="알아두면 좋은 점" %}
 
 ```
+
 - 프리페칭은 개발 환경에서는 활성화되지 않고 프로덕션 환경에서만 활성화됩니다.
+
 ```
 
 {% endcode %}
 
+### Cache
 
+Next.js에는 Router Cache라고 불리는 인메모리 클라이언트 사이드 캐시가 있습니다. 사용자가 앱을 탐색할 때, 프리페치된 라우트 세그먼트와 방문한 라우트의 React Server Component Payload가 이 캐시에 저장됩니다.
+
+이는 내비게이션 시 서버에 새로운 요청을 하는 대신 가능한 한 캐시를 재사용한다는 것을 의미합니다. 이를 통해 요청 횟수와 전송되는 데이터량을 줄여 성능을 향상시킵니다.
+
+Router Cache의 작�� 방식과 구성 방법에 대해 자세히 알아보려면 [여기]("https://nextjs.org/docs/app/building-your-application/caching#router-cache")를 클릭하세요.
+
+### Partial Rendering
+
+부분 렌더링은 내비게이션 시 변경되는 라우트 세그먼트만 클라이언트에서 다시 렌더링되고, 공유된 세그먼트는 유지되는 것을 의미합니다.
+
+예를 들어, `/dashboard/settings`와 `/dashboard/analytics`라는 두 형제 라우트 사이를 이동할 때, settings와 analytics 페이지만 렌더링되고 공유된 dashboard 레이아웃은 유지됩니다.
+
+<figure>
+  <img src="https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fpartial-rendering.png&w=3840&q=75&dpl=dpl_4kWRRdpV5mEWMp9Zhahs8vP5fgBq" alt="부분 렌더링 예시">
+  <figcaption>부분 렌더링 예시</figcaption>
+</figure>
+
+부분 렌더링이 없다면, 각 내비게이션마다 클라이언트에서 전체 페이지를 다시 렌더링해야 할 것입니다. 변경되는 세그먼트만 렌더링함으로써 전송되는 데이터량과 실행 시간을 줄여 성능을 향상시킵니다.
+
+### Soft Navigation
+
+브라우저는 페이지 간 이동 시 "하드 네비게이션"을 수행합니다. Next.js App Router는 페이지 간 "소프트 네비게이션"을 활성화하여 변경된 라우트 세그먼트만 다시 렌더링되도록 합니다(부분 렌더링). 이는 내비게이션 시 클라이언트 React 상태를 유지하는 데 도움이 됩니다.
+
+### Back and Forward Navigation
+
+Next.js는 기본적으로 뒤로/앞으로 내비게이션 시 스크롤 위치를 유지하고 Router Cache의 세그먼트를 재사용합니다.
+
+### Routing between `pages/` and `app/`
+
+`pages/`에서 `app/`로 점진적으로 마이그레이션할 때, Next.js 라우터는 두 방식 사이의 하드 네비게이션을 자동으로 처리합니다. `pages/`에서 `app/`로의 전환을 감지하기 위해 클라이언트 라우터 필터가 있는데, 이는 app 라우트에 대한 확률적 검사를 활용합니다. 이로 인해 간혹 거짓 양성(false positive)이 발생할 수 있습니다. 기본적으로 이러한 경우는 매우 드물어야 하며, 거짓 양성 가능성을 0.01%로 설정합니다. 
+
+이 가능성은 `next.config.js` 파일의 `experimental.clientRouterFilterAllowedRate` 옵션을 통해 사용자 정의할 수 있습니다. 거짓 양성 비율을 낮추면 클라이언트 번들에서 생성된 필터의 크기가 증가한다는 점을 유의해야 합니다.
+
+대안으로, 이 처리를 완전히 비활성화하고 `pages/`와 `app/` 사이의 라우팅을 수동으로 관리하고 싶다면, `next.config.js`에서 `experimental.clientRouterFilter`를 false로 설정할 수 있습니다. 이 기능을 비활성화하면, app 라우트와 겹치는 pages의 동적 라우트는 기본적으로 제대로 탐색되지 않습니다.
