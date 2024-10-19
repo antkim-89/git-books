@@ -1,10 +1,10 @@
 ---
-description: Nextjs에서 네비게이팅 하는 법
+description: Next.js에서 네비게이팅 하는 법
 ---
 
 # Link and Navigating
 
-Nextjs 내에서 라우팅을 할 수 있는 방법은 4가지입니다.
+Next.js 내에서 라우팅을 할 수 있는 방법은 4가지입니다.
 
 • `<Link>` 컴포넌트를 이용하는 방법
 
@@ -16,11 +16,11 @@ Nextjs 내에서 라우팅을 할 수 있는 방법은 4가지입니다.
 
 이 방법들을 어떻게 사용하는지 익혀봅시다.
 
-## `<Link>` Compoent
+## `<Link>` Component
 
 `<Link>`의 경우 `prefetching`기능과 라우트 간의 클라이언트 사이드 네비게이팅을 위해 `<a>` 태그로 만들어진 컴포넌트입니다.
 
-Nextjs에서 가장 추천하는 라우팅 방식입니다.
+Next.js에서 가장 추천하는 라우팅 방식입니다.
 
 {% endcode %}
 
@@ -105,13 +105,12 @@ export default async function Profile({ params }: { params: { id: string } }) {
 - redirect는 절대 URL도 허용하며 외부 링크로 리다이렉트하는 데 사용할 수 있습니다.
 
 - 렌더링 프로세스 이전에 리다이렉트하려면 next.config.js 또는 미들웨어를 사용하세요.
-
 ```
 {% endcode %}
 
 ## History API
 
-Nextjs에서는 브라우저의 History API의 `pushState`와 `replaceState` 메서드를 사용하여 브라우저의 히스토리를 스택을 사용하여 리로딩없이 라우팅을 할 수 있습니다.
+Next.js에서는 브라우저의 History API의 `pushState`와 `replaceState` 메서드를 사용하여 브라우저의 히스토리를 스택을 사용하여 리로딩없이 라우팅을 할 수 있습니다.
 
 
 ### `pushState`
@@ -212,7 +211,6 @@ Next.js에서 라우트를 프리페치하는 두 가지 방법이 있습니다:
 {% code title="알아두면 좋은 점" %}
 
 ```
-
 - 프리페칭은 개발 환경에서는 활성화되지 않고 프로덕션 환경에서만 활성화됩니다.
 
 ```

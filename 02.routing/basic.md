@@ -1,12 +1,12 @@
 ---
-description: nextjs 라우팅 기본 개념
+description: Next.js 라우팅 기본 개념
 ---
 
 # basic
 
 ### Basic Structure(기본 구조)
 
-next.js의 기본 라우팅 개념을 이해하는덴 다음 그림을 보시는게 도움이 됩니다.
+Next.js의 기본 라우팅 개념을 이해하는덴 다음 그림을 보시는게 도움이 됩니다.
 
 <figure><img src="https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fterminology-component-tree.png&#x26;w=1920&#x26;q=75" alt=""><figcaption><p>NextJs 라우팅 구조도</p></figcaption></figure>
 
@@ -20,7 +20,7 @@ next.js의 기본 라우팅 개념을 이해하는덴 다음 그림을 보시는
 
 ### URL 구조
 
-Nextjs의 URL이 어떻게 구성 되는지 설명하는 그림입니다.
+Next.js의 URL이 어떻게 구성 되는지 설명하는 그림입니다.
 
 <figure><img src="https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fterminology-url-anatomy.png&#x26;w=1920&#x26;q=75" alt=""><figcaption></figcaption></figure>
 
