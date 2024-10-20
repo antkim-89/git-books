@@ -2,9 +2,9 @@
 description: Next.js 라우팅 기본 개념
 ---
 
-# basic
+# Basic
 
-### Basic Structure(기본 구조)
+## Basic Structure(기본 구조)
 
 Next.js의 기본 라우팅 개념을 이해하는덴 다음 그림을 보시는게 도움이 됩니다.
 
@@ -18,7 +18,7 @@ Next.js의 기본 라우팅 개념을 이해하는덴 다음 그림을 보시는
 
 • **Leaf**: 자식이 없는 노드로, 예를 들어 URL 경로의 마지막 세그먼트입니다.
 
-### URL 구조
+## URL Structure(URL 구조)
 
 Next.js의 URL이 어떻게 구성 되는지 설명하는 그림입니다.
 
@@ -28,7 +28,7 @@ Next.js의 URL이 어떻게 구성 되는지 설명하는 그림입니다.
 
 • **URL Path:** 도메인 이후에 씌여진 경로의 일부 입니다. (예: "/dashboard/setting")
 
-### Folder and Page(폴더와 파일)
+## Folder and Page(폴더와 파일)
 
 Next.js는 다음과 같은 파일 시스템 기반 라우터를 사용합니다.
 

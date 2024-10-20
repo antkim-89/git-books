@@ -8,8 +8,6 @@ UI를 구성하는 기본 적인 파일들입니다.
 
 앞으로 UI 구성함에 있어 각 파일 간의 차이점을 잘 구분지어 사용하는 방법을 익힐 것 입니다.
 
-# Pages
-
 ## Page
 
 page 파일은 경로(폴더)당 내부에 단일로 존재해야합니다. page파일로 경로의 View를 표현할 수 있습니다.
@@ -109,13 +107,19 @@ export default function RootLayout({
 
 ```
 - 루트 레이아웃만이 <html>과 <body>를 포함할 수 있습니다.
-- 기본적으로 서버 컴포넌트로 설정되지만, 클라이언트 컴포넌트로 설정할 수 있습니다.
-레이아웃은 데이터 패칭이 가능합니다.
+
+- 기본적으로 서버 컴포넌트로 설정되지만, 클라이언트 컴포넌트로 설정할 수 있습니다. 레이아웃은 데이터 패칭이 가능합니다.
+
 - 부모 레이아웃과 자식 간에 데이터를 직접 전달할 수는 없습니다. 하지만 동일한 데이터를 경로에서 여러 번 가져오는 것은 가능하며, React는 성능에 영향을 주지 않고 이러한 요청을 자동으로 중복 제거(dedupe)합니다.
+
 - layout에서는 pathname에 직접 접근이 불가능합니다. 하지만 주입된 클라이언트 컴포넌트의 경우 usePathname hook을 사용할 수 있습니다.
+
 - 레이아웃은 자신 아래의 경로 세그먼트에 접근할 수 없습니다. 모든 경로 세그먼트에 접근하려면 클라이언트 컴포넌트에서 useSelectedLayoutSegment 또는 useSelectedLayoutSegments를 사용할 수 있습니다.
+
 - Route Groups를 사용하면 특정 경로 세그먼트를 공유 레이아웃에 포함하거나 제외할 수 있습니다.
+
 - Route Groups를 사용하면 여러 개의 루트 레이아웃을 생성할 수 있습니다. 이를 통해 경로 세그먼트를 그룹화하고 각 그룹에 대해 별도의 레이아웃을 설정할 수 있습니다. 이는 보다 복잡한 레이아웃 구조를 유연하게 구성하는 데 유용합니다.
+
 - 페이지 디렉토리에서 마이그레이션할 때, 루트 레이아웃은 기존의 _app.js와 _document.js 파일을 대체합니다. 마이그레이션 가이드를 참조하여 전환 과정을 확인할 수 있습니다.
 ```
 
@@ -123,11 +127,15 @@ export default function RootLayout({
 
 ### Template
 
-`template`는 `layout`과 유사하게 작동하지만, 탐색 시에 매번 새로운 인스턴스를 만들어냅니다. 그렇기 때문에 컴포넌트의 상태가 유지되지 않으며, `useEffect`는 다시 동기화됩니다. 이렇게 재동기화가 필요한 경우엔 `layout`보단 `template`을 활용하는 것이 유리합니다.
+`template`는 `layout`과 유사하게 작동하지만, 탐색 시에 매번 새로운 인스턴스를 만들어냅니다. 그렇기 때문에 컴포넌트의 상태가 유지되지 않으며, `useEffect`는 다시 동기화됩니다. 
+
+이렇게 재동기화가 필요한 경우엔 `layout`보단 `template`을 활용하는 것이 유리합니다.
 
 <figure><img src="https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Ftemplate-special-file.png&w=1920&q=75" alt=""><figcaption><p>template 위치 예시</p></figcaption></figure>
 
-template는 `layout`과 자식 컴포넌트 사이에 위치하여 렌더링됩니다. 예를 들어, 탐색 시 `layout`이 상태를 유지하는 동안, `template`은 자식 컴포넌트의 새 인스턴스를 생성합니다. 이를 통해 `template`이 `layout`과 자식 사이의 중개 역할을 하며, 자식 컴포넌트는 초기화됩니다.
+template는 `layout`과 자식 컴포넌트 사이에 위치하여 렌더링됩니다. 예를 들어, 탐색 시 `layout`이 상태를 유지하는 동안, `template`은 자식 컴포넌트의 새 인스턴스를 생성합니다. 
+
+이를 통해 `template`이 `layout`과 자식 사이의 중개 역할을 하며, 자식 컴포넌트는 초기화됩니다.
 
 {% endcode %}
 
@@ -142,11 +150,11 @@ template는 `layout`과 자식 컴포넌트 사이에 위치하여 렌더링됩�
 
 {% endcode %}
 
-## ETC(meata, nav link)
+## ETC(meta, nav link)
 
 ### Metadata
 
-Nextjs에서는 Metadata api를 통해서 `<head>`, `title`와 `meta`등의 HTML 엘리먼트를 설정할 수 있습니다. 아래의 예시를 보면 이해하기 편합니다.
+Next.js에서는 Metadata api를 통해서 `<head>`, `title`와 `meta`등의 HTML 엘리먼트를 설정할 수 있습니다. 아래의 예시를 보면 이해하기 편합니다.
 
 {% endcode %}
 
