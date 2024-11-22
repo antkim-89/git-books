@@ -39,7 +39,7 @@ export default function Loading() {
 
 {% endcode %}
 
-{% code title="알아두면 좋은 것" %}
+{% code title="체크 사항" %}
 
 ```
 - 서버 중심 라우팅을 사용하더라도 내비게이션이 즉각적으로 이루어집니다.
@@ -61,7 +61,7 @@ export default function Loading() {
 
 {% endcode %}
 
-{% code title="알아두면 좋은 것" %}
+{% code title="체크 사항" %}
 
 ```
 - 일부 브라우저는 스트리밍 응답을 버퍼링합니다. 스트리밍 응답을 볼 수 있을 때까지 1024바이트를 초과할 때까지 볼 수 없습니다. 이는 일반적으로 “hello world” 애플리케이션에만 영향을 미치지만 실제 애플리케이션에는 영향을 미치지 않습니다.
