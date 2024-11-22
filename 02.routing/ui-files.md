@@ -30,7 +30,7 @@ export default function Page() {
 {% code title="체크 사항" %}
 
 
-```
+```markdown
 
 경로(폴더)당 단일로 존재해야 합니다.
 page 파일이 없으면 해당 경로로 퍼블릭한 접근을 할 수 없습니다.
@@ -109,7 +109,7 @@ export default function RootLayout({
 
 {% code title="체크 사항" %}
 
-```
+```markdown
 
 - 루트 레이아웃만이 <html>과 <body>를 포함할 수 있습니다.
 

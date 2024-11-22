@@ -53,8 +53,10 @@ export default function Loading() {
 
 {% endcode %}
 
-```
+```markdown
+
 추천: 라우트 세그먼트(레이아웃 및 페이지)에 `loading.js` 규칙을 사용하세요. Next.js는 이 기능을 최적화하기 때문입니다.
+
 ```
 
 ## Streaming with Suspense
@@ -65,7 +67,7 @@ export default function Loading() {
 
 {% code title="체크 사항" %}
 
-```
+```markdown
 
 - 일부 브라우저는 스트리밍 응답을 버퍼링합니다. 스트리밍 응답을 볼 수 있을 때까지 1024바이트를 초과할 때까지 볼 수 없습니다. 이는 일반적으로 “hello world” 애플리케이션에만 영향을 미치지만 실제 애플리케이션에는 영향을 미치지 않습니다.
 

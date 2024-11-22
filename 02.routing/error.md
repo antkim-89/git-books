@@ -78,11 +78,13 @@ export function Signup() {
 
 {% code title="체크 사항" %}
 
-```
+```markdown
 
-이 예제는 React의 useFormState 훅을 사용하며, Next.js App Router와 함께 제공됩니다. React 19를 사용하는 경우 useActionState를 대신 사용하세요. 자세한 내용은 [React 문서](https://react.dev/reference/react-dom/hooks/useActionState)를 참조하세요.
+이 예제는 React의 useFormState 훅을 사용하며, Next.js App Router와 함께 제공됩니다. React 19를 사용하는 경우 useActionState를 대신 사용하세요. 
+자세한 내용은 [React 문서](https://react.dev/reference/react-dom/hooks/useActionState)를 참조하세요.
 
 ```
 
 
 {% endcode %}
+
