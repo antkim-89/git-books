@@ -93,9 +93,9 @@ export default async function Profile({ params }: { params: { id: string } }) {
 
 {% endcode %}
 
-{% code title="good to know" %}
+{% code title="체크 사항" %}
 
-```
+```markdown
 - redirect는 307 (Temporary Redirect) 상태를 기본적으론 리턴합니다. 서버 액션을 사용할 때, 보통 POST 요청에 성공 페이지로 리다이렉팅 하기 위한 결과로 사용되는 303 (See Other)을 리턴합니다.
 
 - redirect는 내부적으로 오류를 발생시키므로 try/catch 블록 외부에서 호출해야 합니다.
@@ -218,9 +218,7 @@ Next.js에서 라우트를 프리페치하는 두 가지 방법이 있습니다:
 {% code title="체크 사항" %}
 
 ```markdown
-
 - 프리페칭은 개발 환경에서는 활성화되지 않고 프로덕션 환경에서만 활성화됩니다.
-
 ```
 
 {% endcode %}
