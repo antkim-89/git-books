@@ -14,3 +14,4 @@
 - [link and navigating](02.routing/link-and-nav.md)
 - [loading ui and streaming](02.routing/loading.md)
 - [error handling](02.routing/error.md)
+- [redirect](02.routing/redirect.md)
