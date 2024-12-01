@@ -133,19 +133,80 @@ Next.js는 error boundaries를 사용하여 포착되지 않은 예외를 처리
 
 {% endcode %}
 
-{% code title="app/page.tsx" %}
+{% code title="app/dashboard/error.tsx" %}
 
 ```js
-export default async function Page() {
-  const res = await fetch(`https://...`)
-  const data = await res.json()
+'use client' // Error boundary들은 반드시 클라이언트 컴포넌트여야 합니다.
  
-  if (!res.ok) {
-    return 'There was an error.'
-  }
+import { useEffect } from 'react'
  
-  return '...'
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string }
+  reset: () => void
+}) {
+  useEffect(() => {
+    // Log the error to an error reporting service
+    console.error(error)
+  }, [error])
+ 
+  return (
+    <div>
+      <h2>Something went wrong!</h2>
+      <button
+        onClick={
+          // Attempt to recover by trying to re-render the segment
+          () => reset()
+        }
+      >
+        Try again
+      </button>
+    </div>
+  )
 }
 ```
 
 {% endcode %}
+
+오류를 상위 error boundary로 전파하고 싶다면, `error` 컴포넌트를 렌더링할 때 `throw`할 수 있습니다.
+
+### Handling Errors in Nested Routes
+
+오류는 가장 가까운 상위 error boundary로 전파됩니다. 이는 라우트 계층 구조의 다른 수준에서 `error.tsx` 파일을 배치하여 세부적인 오류 처리를 가능하게 합니다.
+
+<figure><img src=https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fnested-error-component-hierarchy.png&w=1920&q=75&dpl=dpl_A94AMRojTrsJaESsxoTj8KmPdq46" alt=""><figcaption><p>error boundry 예시</p></figcaption></figure>
+
+### Handling Global Errors
+
+상대적으로 드문 경우, 루트 레이아웃에서 오류를 처리하기 위해 `app/global-error.js`를 사용할 수 있습니다. 국제화를 활용할 때도 마찬가지입니다. 전역 오류 UI는 자체 `<html>` 및 `<body>` 태그를 정의해야 합니다. 활성화될 때 루트 레이아웃 또는 템플릿을 대체하기 때문입니다.
+
+{% endcode %}
+
+{% code title="app/global-error.tsx" %}
+
+```js
+'use client' // Error boundaries must be Client Components
+ 
+export default function GlobalError({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string }
+  reset: () => void
+}) {
+  return (
+    // global-error must include html and body tags
+    <html>
+      <body>
+        <h2>Something went wrong!</h2>
+        <button onClick={() => reset()}>Try again</button>
+      </body>
+    </html>
+  )
+}
+```
+
+{% endcode %}
+
