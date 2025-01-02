@@ -65,4 +65,9 @@ export async function createPost(id: string) {
 
 {% endcode %}
 
+더 많은 정보는 [the `redirect` API reference](https://nextjs.org/docs/app/api-reference/functions/redirect) 를 참고 바랍니다.
+
+## `permanentRedirect` function
+
+`permanentRedirect` 함수는 사용자를 다른 URL로 영구적으로 리다이렉트할 수 있습니다. 서버 컴포넌트, 라우트 핸들러, 서버 액션에서 `permanentRedirect` 함수를 호출할 수 있습니다.
 
