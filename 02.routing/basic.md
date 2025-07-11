@@ -8,7 +8,7 @@ description: Next.js 라우팅 기본 개념
 
 Next.js의 기본 라우팅 개념을 이해하는덴 다음 그림을 보시는게 도움이 됩니다.
 
-<figure><img src="https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fterminology-component-tree.png&#x26;w=1920&#x26;q=75" alt=""><figcaption><p>NextJs 라우팅 구조도</p></figcaption></figure>
+<figure><img src="https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Fdocs%2Fdark%2Ftop-level-folders.png&w=3840&q=75" alt=""><figcaption><p>NextJs 라우팅 구조도</p></figcaption></figure>
 
 • **Tree**: 계층 구조를 시각화하는 방식, 예를 들어 부모와 자식 컴포넌트로 이루어진 컴포넌트 트리나 폴더 구조를 의미합니다.
 
